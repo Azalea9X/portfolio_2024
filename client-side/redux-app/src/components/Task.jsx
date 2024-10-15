@@ -25,27 +25,47 @@ const Task = () => {
   }
 
   return (
-    <div className="task-component">
+    <div className="task-component" >
       <div className="add-task">
-        <form onSubmit={addNewTask}>
+        <form onSubmit={addNewTask} className="w-[600px]" 
+         style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "100px",
+          padding: "20px",
+          margin: "0 auto",
+          borderRadius: "10px",
+          justifyContent: "center",
+          alignItems: "center", 
+          backgroundColor: "black", 
+          color: "white",
+     
+
+        }} >
+          <label htmlFor="title">Title
           <input
             type="text"
-            placeholder="Title"
+            name="title"
             ref={titleRef}
-            className="taskInput"
-          />
+            className="taskInput text-white"
+
+          /></label>
+          <label htmlFor="content">Content
           <input
+          name="content"
             type="text"
             placeholder="Content"
             ref={contentRef}
-            className="taskInput"
-          />
+            className="taskInput text-white"
+          /></label>
+          <label htmlFor="author">Author
           <input
+          name="author"
             type="text"
             placeholder="Author"
             ref={authorRef}
-            className="taskInput"
-          />
+            className="taskInput text-white"
+          /></label>
           <button type="submit">Add task</button>
         </form>
       </div>

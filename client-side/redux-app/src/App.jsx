@@ -1,5 +1,5 @@
 import React from 'react';
-import Task from "./components/Task";
+
 import TaskList from "./components/TaskList";
 import cors from "cors"; 
 
@@ -18,9 +18,9 @@ const App = () => {
     <Container className="">
       <div className="app text-center ">
         <h1 className="app__title">ToDo App</h1>
-        <Task />
+   
         <TaskList />
-        <p className="">The quick brown fox...</p>
+
       </div>
     </Container>
     </div>

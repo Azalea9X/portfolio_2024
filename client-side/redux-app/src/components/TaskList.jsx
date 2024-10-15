@@ -1,13 +1,16 @@
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { deleteToDo, UpdateToDo } from "../actions/index.js";
 import axios from "axios"; 
-import { useEffect, useState } from "react";
 import EditView from "./Edit.jsx"; // Import the EditView component
-import "./../output.css"
+import "./../output.css";
+import Task from "./Task";
+
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
   const [editing, setEditing] = useState(false); // State to manage editing mode
   const [currentTask, setCurrentTask] = useState(null); // State to manage the current task being edited
+  const [showTask, setShowTask] = useState(false); // State to manage the visibility of the Task component
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -52,12 +55,20 @@ const TaskList = () => {
     setCurrentTask(task);
   }
 
+  function toggleShowTask() {
+    setShowTask(!showTask);
+  }
+
+  function AddToDo() {
+    setShowTask(true);
+  }
+
   return (
     <div className="container">
       <h2 className="my-4">Task List</h2>
       <table id="table" className="text-center relative 
-      sm:min-w-[500px] left-[-6rem]
-  md:left-[2rem] lg:left-[150px] xl:left-[18rem] lap:min-w-[800px] left-[20rem]">
+      sm:min-w-[450px] left-[-1rem]
+  md:left-[2rem] lg:left-[150px] xl:left-[18rem] ">
         <thead>
           <tr className="text-red-600 ">
             <th>Task Title</th>
@@ -78,6 +89,12 @@ const TaskList = () => {
                   toggleEdit(task);
                   document.querySelector("#table").style.display = "none";  
                 }}>Edit</button>
+                <button className="btn btn-success" onClick={() => {
+                  document.querySelector("#table").style.display="none"; 
+                  toggleShowTask();
+                }}>
+                  Add to do
+                </button>
               </td>
             </tr>
           ))}
@@ -86,6 +103,10 @@ const TaskList = () => {
 
       {editing && currentTask && (
         <EditView task={currentTask} setEditing={setEditing} updateTask={updateTask} />
+      )}
+
+      {showTask && (
+        <Task />
       )}
     </div>
   );
