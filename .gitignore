@@ -26,10 +26,12 @@ lerna-debug.log*
 /client-side/redux-tutorial
 /backend/tutorials
 /backend/todos-express-google-oauth2
+/backend/server/model/db.js
 /backend/public
 /backend/.env
 /public
 /src
+/backend/library_MDN_example/DB/mongo_db_config.js
 
 /**/.git
 /**/**/.git
