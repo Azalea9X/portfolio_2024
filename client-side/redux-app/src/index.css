@@ -61,3 +61,11 @@ td {
 html {
   font-size: 16px !important;
 }
+
+
+input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  border: none;
+  color: black !important;
+}

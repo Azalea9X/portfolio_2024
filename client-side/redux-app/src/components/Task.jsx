@@ -18,9 +18,7 @@ const Task = () => {
 
     if (task.title !== "" && task.content !== "" && task.author !== "") {
       dispatch(addTodo(task));
-      titleRef.current.value = "";
-      contentRef.current.value = "";
-      authorRef.current.value = "";
+document.write("Task sent");
     }
   }
 
