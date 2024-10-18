@@ -28,7 +28,7 @@ lerna-debug.log*
 /backend/todos-express-google-oauth2
 /backend/public
 /backend/.env
-/backend/
+
 /**/.git
 /**/**/.git
 /**/**/**/.git
