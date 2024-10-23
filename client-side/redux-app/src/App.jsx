@@ -16,10 +16,24 @@ const App = () => {
   return (
     <div>
     <Container className="">
-      <div className="app text-center ">
-        <h1 className="app__title">ToDo App</h1>
+    <div className="app text-center  lg:min-w-[900px] " style={{
+      marginTop: window.innerWidth < 768? '100px' : '200px',
+      padding: '20px',
+      background: 'white',
+      color: 'black', 
+      borderRadius: '5px',
+      boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)', 
+      fontFamily: "'Poppins', sans-serif',",
+      fontSize: window.innerWidth < 768? '20px' : '30px',
+      position: 'relative', 
+      left: 
+      window.innerWidth < 768? '50%' : '0',
+      transform: window.innerWidth < 768? 'translateX(-30%)' : 'translateX(-30%)',
+    }}>
+        <h1 className="app__title " >ToDo App</h1>
    
-        <TaskList />
+        <TaskList style={{
+         }} />
 
       </div>
     </Container>

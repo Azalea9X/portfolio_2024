@@ -11,6 +11,9 @@ h4 {
   padding: 0;
 }
 
+nav ul li a {
+  display: inline-block;
+}
 .app {
   margin: 50px;
 }
@@ -60,6 +63,11 @@ td {
 
 html {
   font-size: 16px !important;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 
@@ -68,4 +76,18 @@ input[type="text"] {
   padding: 5px;
   border: none;
   color: black !important;
+}
+
+.test-section {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 900px; /* Use of !important is discouraged */
+  min-width: 500px; /* Use of !important is discouraged */
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
