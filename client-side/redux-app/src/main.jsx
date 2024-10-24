@@ -36,19 +36,20 @@ const AppRouter = () => (
 const styles = {
   container: {
     display: "flex",
-    marginBottom: '100px !important',
-   justifyContent: 'space-evenly', 
+    marginBottom: "100px", // Removed !important as it's not valid in JS
+    justifyContent: "space-evenly",
     position: "relative",
+    flexDirection: "column", // Changed 'direction' to 'flexDirection'
     top: 0,
     overflow: "hidden",
-    backgroundColor: "black", 
+    backgroundColor: "black",
     color: "white",
     fontFamily: "Arial, sans-serif",
     padding: "20px",
     borderRadius: "10px",
-    boxShadow: "0 0 10px rgba(0,0,0,0.5)",
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
     transition: "background-color 0.3s ease-in-out",
-    paddingBottom: "5rem"
+    paddingBottom: "5rem",
   },
 };
 

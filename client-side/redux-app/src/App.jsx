@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div>
     <Container className="">
-    <div className="app text-center  lg:min-w-[900px] " style={{
+    <div className="app text-center relative sm:min-w-[600px] md:min-w-[600px] left-[14rem] top-[-8rem] lg:min-w-[900px] left-[18rem] xl:left-[23rem] 2xl:left-[26rem]" style={{
       marginTop: window.innerWidth < 768? '100px' : '200px',
       padding: '20px',
       background: 'white',
@@ -26,8 +26,7 @@ const App = () => {
       fontFamily: "'Poppins', sans-serif',",
       fontSize: window.innerWidth < 768? '20px' : '30px',
       position: 'relative', 
-      left: 
-      window.innerWidth < 768? '50%' : '0',
+      
       transform: window.innerWidth < 768? 'translateX(-30%)' : 'translateX(-30%)',
     }}>
         <h1 className="app__title " >ToDo App</h1>

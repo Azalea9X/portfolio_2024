@@ -70,7 +70,7 @@ const TaskList = () => {
       sm:min-w-[450px] left-[-1rem]
   md:left-[2rem] lg:left-[150px] xl:left-[18rem]  ">
         <thead>
-          <tr className="text-red-600 2xl:text-white">
+          <tr className="text-red-600 2xl:text-red-600 d-flex space-between">
             <th>Task Title</th>
             <th>Task Content</th>
             <th>Task Author</th>
