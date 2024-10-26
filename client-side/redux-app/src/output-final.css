@@ -634,84 +634,24 @@ video {
   position: relative;
 }
 
+.left-\[-15rem\] {
+  left: -15rem;
+}
+
 .left-\[-1rem\] {
   left: -1rem;
-}
-
-.left-\[-3rem\] {
-  left: -3rem;
-}
-
-.left-\[-rem\] {
-  left: -rem;
-}
-
-.left-\[-6rem\] {
-  left: -6rem;
-}
-
-.left-\[-5rem\] {
-  left: -5rem;
-}
-
-.left-\[-2rem\] {
-  left: -2rem;
-}
-
-.left-\[2rem\] {
-  left: 2rem;
-}
-
-.left-\[4rem\] {
-  left: 4rem;
-}
-
-.left-\[5rem\] {
-  left: 5rem;
-}
-
-.left-\[10rem\] {
-  left: 10rem;
-}
-
-.left-\[15rem\] {
-  left: 15rem;
-}
-
-.left-\[12rem\] {
-  left: 12rem;
-}
-
-.top-\[\] {
-  top: ;
-}
-
-.top-\[-2rem\] {
-  top: -2rem;
-}
-
-.top-\[-5rem\] {
-  top: -5rem;
 }
 
 .left-\[14rem\] {
   left: 14rem;
 }
 
-.top-\[-8rem\] {
-  top: -8rem;
-}
-
-.left-\[6rem\] {
-  left: 6rem;
-}
-
-.left-\[rem\] {
-  left: rem;
-}
-
 .left-\[18rem\] {
   left: 18rem;
+}
+
+.top-\[-8rem\] {
+  top: -8rem;
 }
 
 .my-4 {
@@ -743,8 +683,16 @@ video {
   width: 600px;
 }
 
+.max-w-\[600px\] {
+  max-width: 600px;
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -756,6 +704,10 @@ video {
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -787,6 +739,38 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type="text"]{
+  color: black !important;
+}
+
+html {
+  font-size: 16px !important;
+  line-height: 1.5;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+table.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+table.table th, 
+table.table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  max-width: 200px !important;
+  /* Set max width for the cells */
+  word-wrap: break-word;
+  /* Ensure long words wrap to the next line */
+  overflow-wrap: break-word;
+  /* Also ensures text wrapping */
+  white-space: normal;
+  /* Allow text to wrap normally */
 }
 
 @media (min-width: 425px) {
@@ -824,22 +808,6 @@ video {
     left: 18rem;
   }
 
-  .xl\:left-\[4rem\] {
-    left: 4rem;
-  }
-
-  .xl\:left-\[20rem\] {
-    left: 20rem;
-  }
-
-  .xl\:left-\[22rem\] {
-    left: 22rem;
-  }
-
-  .xl\:left-\[25rem\] {
-    left: 25rem;
-  }
-
   .xl\:left-\[23rem\] {
     left: 23rem;
   }
@@ -850,14 +818,14 @@ video {
     left: 26rem;
   }
 
-  .\32xl\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
   .\32xl\:text-red-600 {
     --tw-text-opacity: 1;
     color: rgb(220 38 38 / var(--tw-text-opacity));
   }
 }
 
+@media (min-width: 1600px) {
+  .\33xl\:left-\[0rem\] {
+    left: 0rem;
+  }
+}

@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import App from './App'; // Ensure you import your App component
 import Test from './pages/test'; // Ensure you import your Test component
 import store from './store'; // Ensure you import your Redux store
+import Home from "./pages/home"; 
 
 // Define NotFound component
 const NotFound = () => <div>Page Not Found</div>;
@@ -25,6 +26,7 @@ const AppRouter = () => (
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/home" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

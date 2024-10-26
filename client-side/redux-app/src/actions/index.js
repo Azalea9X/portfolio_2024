@@ -58,6 +58,9 @@ export const UpdateToDo = (taskId, updatedTask) => async dispatch => {
 
 export const addTodo = task => async dispatch => {
   try {
+    let form = document.querySelector("form"); 
+    
+
     const response = await axios.post(apiEndpoint, {
       query: `
         mutation addPost($title: String!, $content: String!, $author: String!) {

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { deleteToDo, UpdateToDo } from "../actions/index.js";
 import axios from "axios"; 
-import EditView from "./Edit.jsx"; // Import the EditView component
-import "./../output.css";
-import Task from "./Task";
+import EditView from "./../components/Edit.jsx"; // Import the EditView component
+ 
+import Task from "./../components/Task";
 
-const TaskList = () => {
+const Home = () => {
   const [tasks, setTasks] = useState([]);
   const [editing, setEditing] = useState(false); // State to manage editing mode
   const [currentTask, setCurrentTask] = useState(null); // State to manage the current task being edited
@@ -84,32 +84,16 @@ const TaskList = () => {
               <td>{task.content}</td>
               <td>{task.author}</td>
               <td>
-                <button className="btn btn-danger me-2" onClick={() => deleteTask(task.id)}>Delete</button>
-                <button className="btn btn-primary" onClick={() => {
-                  toggleEdit(task);
-                  document.querySelector("#table").style.display = "none";  
-                }}>Edit</button>
-                <button className="btn btn-success" onClick={() => {
-                  document.querySelector("#table").style.display="none"; 
-                  toggleShowTask();
-                }}>
-                  Add to do
-                </button>
+
               </td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      {editing && currentTask && (
-        <EditView task={currentTask} setEditing={setEditing} updateTask={updateTask} />
-      )}
-
-      {showTask && (
-        <Task />
-      )}
+ 
     </div>
   );
 };
 
-export default TaskList;
+export default Home;
