@@ -634,12 +634,24 @@ video {
   position: relative;
 }
 
+.left-\[-10\%\] {
+  left: -10%;
+}
+
+.left-\[-13rem\] {
+  left: -13rem;
+}
+
 .left-\[-15rem\] {
   left: -15rem;
 }
 
 .left-\[-1rem\] {
   left: -1rem;
+}
+
+.left-\[1\.5\%\] {
+  left: 1.5%;
 }
 
 .left-\[14rem\] {
@@ -675,8 +687,8 @@ video {
   margin-top: 0px;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .block {
@@ -793,7 +805,23 @@ table.table td {
   /* Allow text to wrap normally */
 }
 
+form input{
+  color: black !important;
+}
+
+nav ul li a {
+  color: white !important;
+}
+
 @media (min-width: 425px) {
+  .sm\:top-\[5rem\] {
+    top: 5rem;
+  }
+
+  .sm\:min-w-\[300px\] {
+    min-width: 300px;
+  }
+
   .sm\:min-w-\[450px\] {
     min-width: 450px;
   }
@@ -808,12 +836,24 @@ table.table td {
     left: 2rem;
   }
 
+  .md\:left-\[5rem\] {
+    left: 5rem;
+  }
+
+  .md\:top-\[-2rem\] {
+    top: -2rem;
+  }
+
   .md\:min-w-\[600px\] {
     min-width: 600px;
   }
 }
 
 @media (min-width: 1024px) {
+  .lg\:top-\[-3rem\] {
+    top: -3rem;
+  }
+
   .lg\:min-w-\[900px\] {
     min-width: 900px;
   }
@@ -822,10 +862,6 @@ table.table td {
 @media (min-width: 1280px) {
   .xl\:left-\[23rem\] {
     left: 23rem;
-  }
-
-  .xl\:max-w-\[600px\] {
-    max-width: 600px;
   }
 }
 
@@ -843,30 +879,5 @@ table.table td {
 @media (min-width: 1600px) {
   .\33xl\:left-\[0rem\] {
     left: 0rem;
-  }
-
-  .\33xl\:left-\[50\%\] {
-    left: 50%;
-  }
-
-  .\33xl\:left-\[50vw\] {
-    left: 50vw;
-  }
-
-  .\33xl\:left-\[35vw\] {
-    left: 35vw;
-  }
-
-  .\33xl\:left-\[25vw\] {
-    left: 25vw;
-  }
-
-  .\33xl\:hidden {
-    display: none;
-  }
-
-  .\33xl\:text-blue-500 {
-    --tw-text-opacity: 1;
-    color: rgb(59 130 246 / var(--tw-text-opacity));
   }
 }
