@@ -96,7 +96,8 @@ const App = () => {
             <img src="https://play.google.com/intl/en_us/badges/static/images/badge.png" alt="logo" />
           </a>
           <a href="https://apple.com/store" target="_blank" rel="noopener noreferrer">
-            <img src="/Pictures/apple-logo" alt="logo" />
+            <img className="max-w-[50px !important] max-h-[50px !important]"
+            src="https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png" alt="logo" />
           </a>
         </div>
       </Container>
