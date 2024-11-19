@@ -96,7 +96,7 @@ const App = () => {
             <img src="https://play.google.com/intl/en_us/badges/static/images/badge.png" alt="logo" />
           </a>
           <a href="https://apple.com/store" target="_blank" rel="noopener noreferrer">
-            <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred_2x.png" alt="logo" />
+            <img src="/Pictures/apple-logo" alt="logo" />
           </a>
         </div>
       </Container>
