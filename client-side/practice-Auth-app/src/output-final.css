@@ -707,12 +707,20 @@ video {
   display: none;
 }
 
+.max-h-\[50px\] {
+  max-height: 50px;
+}
+
 .w-\[600px\] {
   width: 600px;
 }
 
 .max-w-\[600px\] {
   max-width: 600px;
+}
+
+.max-w-\[50px\] {
+  max-width: 50px;
 }
 
 .transform {

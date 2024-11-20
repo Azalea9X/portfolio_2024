@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TaskList from "./components/TaskList";
-
+import axios from "axios"; 
 // Import Bootstrap CSS and JS
 import { 
   Container, Button, InputGroup, FormControl
@@ -17,17 +17,46 @@ const App = () => {
     setUser({
       ...user, [e.target.name]: e.target.value
     });
+    
   };
+
 
   console.log(user);
   useEffect(() => {
     alert(window.innerWidth);
   }, []);
-
-  const registeUser = (e) => {
+  const registerUser = async (e) => {
     e.preventDefault();
     // Registration logic here
+    try {
+      const response = {
+        email: user.email,
+        telephone: user.tel,
+      };
+      console.log('Sending data:', response); // Log the data being sent
+      const res = await axios.post('http://localhost:8000/register', response, {
+        headers: { 'Content-Type': 'application/json' }
+      });
+      console.log('Server response:', res.data); // Log the server response
+    } catch (error) {
+      if (error.response) {
+        // Server responded with a status other than 200 range
+        console.error('Error response:', error.response.data);
+      } else if (error.request) {
+        // Request was made but no response received
+        console.error('Error request:', error.request);
+      } else {
+        // Something else happened in setting up the request
+        console.error('Error message:', error.message);
+      }
+      alert('Failed to register user, please try again.');
+    }
   };
+  
+
+
+  const isSmallScreen = window.innerWidth < 1000;
+
 
   return (
     <div>
@@ -49,7 +78,7 @@ const App = () => {
 
         <h2 className="relative md:left-[5rem]">Sign up for our app.</h2>
      
-          <form onSubmit={registeUser}>
+          <form onSubmit={registerUser} action="http://localhost:8000/register"  method="POST">
             <input 
               type="email" 
               id="email"
@@ -77,6 +106,7 @@ const App = () => {
               I agree to the terms and conditions
             </label><br />
             <Button type="submit"
+
               variant="primary" 
               className="btn mt-4 btn-primary relative md:left-[5rem]" 
               style={{
@@ -96,8 +126,18 @@ const App = () => {
             <img src="https://play.google.com/intl/en_us/badges/static/images/badge.png" alt="logo" />
           </a>
           <a href="https://apple.com/store" target="_blank" rel="noopener noreferrer">
-            <img className="max-w-[50px !important] max-h-[50px !important]"
-            src="https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png" alt="logo" />
+          
+
+<img 
+  style={{
+    height: isSmallScreen ? "40px" : "100px",
+    width: isSmallScreen ? "40px" : "60px",
+  }} 
+
+  className="max-w-[50px] max-h-[50px]"
+  src="https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png" 
+  alt="logo" 
+/>
           </a>
         </div>
       </Container>
