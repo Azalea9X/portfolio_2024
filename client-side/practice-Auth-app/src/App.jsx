@@ -33,11 +33,16 @@ const App = () => {
         email: user.email,
         telephone: user.tel,
       };
-      console.log('Sending data:', response); // Log the data being sent
-      const res = await axios.post('http://localhost:8000/register', response, {
-        headers: { 'Content-Type': 'application/json' }
-      });
-      console.log('Server response:', res.data); // Log the server response
+      
+      const options = {
+        headers: { 'Content-Type': 'application/json' },
+      };
+
+      console.log('Sending data:', response); // Log the data being sent await axios.post('http://localhost:8000/register', response, options);
+      //Send the response
+
+      console.log('Server response:', response.data); // Log the server response
+      await axios.post('http://localhost:8000/register', response, options);
     } catch (error) {
       if (error.response) {
         // Server responded with a status other than 200 range
