@@ -69,10 +69,12 @@ const App = () => {
     if (turn === "player 1") {
       target.classList.add("circle");
       cells[cellIndex] = "circle";
+      target.textContent = ""; 
       setTurn("player 2");
     } else if (turn === "player 2") {
       target.classList.add("cross");
       cells[cellIndex] = "cross";
+      target.textContent = "";
       setTurn("player 1");
     }
 
