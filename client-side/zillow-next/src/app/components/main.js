@@ -1,8 +1,11 @@
+"use client"; 
 import Map from "./map"; 
 import Card from "./card"; 
 import ImageCard from "./image"; 
-
-const getProperties = async() => {
+import { parseAppSegmentConfig } from "next/dist/build/segment-config/app/app-segment-config";
+import React from "react"; 
+import {useEffect, useState} from "react"; 
+const getProperties = async(slug) => {
     try {
         const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT; 
         const response = await fetch(HYGRAPH_ENDPOINT, {
@@ -24,6 +27,11 @@ const getProperties = async() => {
       lattitude
       longitude
     }
+      managingBroker{
+      name, phoneNumber}
+      elevator,
+      parking,
+      pool,
     name
     price
     slug
@@ -47,6 +55,9 @@ const json = await response.json();
 
 const Main = async () => {
     const properties = await getProperties();
+   (()=> {
+    alert("Hi!");
+   })
     console.log("Properties:", properties); // This will print the fetched properties to the console
     return(
         <>
@@ -70,9 +81,14 @@ const Main = async () => {
                                             name={properties[i].name}
                                             price={properties[i].price}
                                             slug={properties[i].slug}
+                                            width={300}
+                                            height={200}
                                         />
                                         <ImageCard 
 url={properties[i].images.url}
+
+             
+
                                             alt={properties[0].images.fileName}
                                         />
                                     </>

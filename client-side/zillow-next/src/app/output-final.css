@@ -679,3 +679,10 @@ h2{
 h3{
   font-size: 2rem;
 }
+
+.card{
+  border: 1px solid black;
+  /*Making a box shadow of red*/
+  box-shadow: 1px 1px 1px red;
+  min-height: 300px !important;
+}
