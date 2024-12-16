@@ -1,10 +1,9 @@
-"use client"; 
+
 import Map from "./map"; 
 import Card from "./card"; 
 import ImageCard from "./image"; 
 import { parseAppSegmentConfig } from "next/dist/build/segment-config/app/app-segment-config";
 import React from "react"; 
-import {useEffect, useState} from "react"; 
 const getProperties = async(slug) => {
     try {
         const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT; 
@@ -59,6 +58,8 @@ const Main = async () => {
     alert("Hi!");
    })
     console.log("Properties:", properties); // This will print the fetched properties to the console
+
+
     return(
         <>
             <main>
@@ -84,16 +85,22 @@ const Main = async () => {
                                             width={300}
                                             height={200}
                                         />
+
+
                                         <ImageCard 
 url={properties[i].images.url}
+id={properties[i].name}
+
 
              
 
                                             alt={properties[0].images.fileName}
                                         />
+
                                     </>
                                 );
                             }
+
                             return elements;
                         })()}
                     </div>

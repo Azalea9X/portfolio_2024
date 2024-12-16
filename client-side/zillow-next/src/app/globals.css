@@ -140,3 +140,31 @@ h3{
   box-shadow: 1px 1px 1px red;
   min-height: 300px !important;
 }
+
+/*Make a modal class that will be applied to a modal when it clicks above the image on the right side of the screen. Should be centered and about 75% width.*/
+.modal{
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  padding: 20px;
+  max-height: 400px !important;
+  margin-bottom: 3rem;
+}
+
+.btnModal {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid green; 
+  cursor: pointer;
+  transition-duration: 0.3s;
+  position: absolute; 
+  right: 20px;
+  top: 20px;
+}
