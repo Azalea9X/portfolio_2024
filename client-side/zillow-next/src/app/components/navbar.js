@@ -1,11 +1,13 @@
 import React from "react";
 import Searchbar from "./searchbar"; 
+import ZillowLogo
+ from "./zillowComponent";
 const Navbar = () => {
   return (
     <>   <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <a className="text-xl font-bold text-gray-800" href="#">
-       Zillow clone!
+<ZillowLogo />
         </a>
 
         <button

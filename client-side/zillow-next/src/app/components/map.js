@@ -1,29 +1,19 @@
 import ImageCard from "./card"; 
 import Link from 'next/link'; 
-
-const Cards = ({ images }) => {
-    return (
-        <div>
-            <h1>Cards</h1>
-            <div className="cards-container">
-                {images.map((image, index) => (
-                    <Link href={`/image/${image.id}`} key={index}>
-                        <a>
-                            <ImageCard image={image} />
-                        </a>
-                    </Link>
-                ))}
-            </div>
-        </div>
-    );
-}
+import {GoogleMap, useJsApiLoader, Marker} from '@react-google-maps/api';
 
 const Map = () => {
-    return (
-        <div>
-            <h1>Map</h1>
+   const containerStyle = {
+        width: '100%',
+        height: '90%'
+    }; 
 
-        </div>
+const locations = [
+    {lat: 25.1972,  }
+]
+    return (
+       <>
+       </>
     );
 }
 
