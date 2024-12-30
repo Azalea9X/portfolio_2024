@@ -31,11 +31,10 @@ const ImageCard = ({ url, filename, width, height, id }) => {
       <span class="close" style={{
       position: 'absolute',
       top: '-300px',
-      maxHeight: '300px !important',
       right: '25px',
       cursor: 'pointer',
       fontSize: '9990px',
-      color: "white! important",
+      color: "white!important",
       zIndex: 1000
 }}
       onClick={exitModal}>×</span>
@@ -53,7 +52,6 @@ const ImageCard = ({ url, filename, width, height, id }) => {
     btn.textContent="Close";
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      modal.innerHTML= ""; 
 modal.style.opacity="0";
 document.body.removeChild(modal);
 document.body.removeChild(btn);

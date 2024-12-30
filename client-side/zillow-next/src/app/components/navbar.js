@@ -1,5 +1,5 @@
 import React from "react";
-import Searchbar from "./searchbar"; 
+import Grid from "./grid"; 
 import ZillowLogo
  from "./zillowComponent";
 const Navbar = () => {
@@ -43,7 +43,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-    <Searchbar />
+
     </>
  
   );

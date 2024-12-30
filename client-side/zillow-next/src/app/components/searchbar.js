@@ -11,10 +11,7 @@ const Searchbar = () => {
     // Define search functionality here
 return(
     <> 
-    <div className="searchbar max-w-[200px] ">
-     <input className="search" type="search" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)} />
-     <button className="searchBtn" type="submit" onClick={handleSearch}>Submit</button>
-     </div>
+ 
 
 </>
 

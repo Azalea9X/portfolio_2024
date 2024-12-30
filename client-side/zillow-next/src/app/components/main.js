@@ -4,6 +4,9 @@ import Card from "./card";
 import ImageCard from "./image"; 
 import { parseAppSegmentConfig } from "next/dist/build/segment-config/app/app-segment-config";
 import React from "react"; 
+import uuid4 from "uuid4";
+import Grid from "./grid"; 
+ 
 const getProperties = async(slug) => {
     try {
         const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT; 
@@ -61,8 +64,9 @@ const Main = async () => {
 
 
     return(
-        <>
-            <main>
+        <><Grid properties={properties}/>
+                        <main>
+
                 <article>
                     <Map />
                 </article>
@@ -75,7 +79,7 @@ const Main = async () => {
                                 elements.push(
                                     <>
                                         <Card 
-                                            key={properties[i].id}
+                                            key={uuid4()}
                                             beds={properties[i].beds}
                                             description={properties[i].description}
                                             location={{latitude: properties[i].location.lattitude, longitude: properties[i].location.longitude}}
@@ -83,7 +87,7 @@ const Main = async () => {
                                             price={properties[i].price}
                                             slug={properties[i].slug}
                                             width={300}
-                                            height={200}
+                                            height={200} 
                                         />
 
 
@@ -96,6 +100,7 @@ id={properties[i].name}
 
                                             alt={properties[0].images.fileName}
                                         />
+                                   
 
                                     </>
                                 );

@@ -36,8 +36,13 @@ const RootLayout = ({children}) => {
     <div className="root-layout">
       <header className="header padding-bottom-[10rem]">
       <Navbar />
+            
         <h1 className="text-red-500 relative 
-        sm:text-4xl left-[1rem] md:text-5xl md:left-[2rem] lg:text-3xl text-center left-[-3rem] xl:text-[5rem] top-[3rem] padding-top-[5rem]
+        sm:text-4xl left-[1rem] 
+        md:text-5xl 
+        md:left-[2rem] 
+        lg:text-3xl text-center left-[-3rem] 
+        xl:text-[5rem] top-[3rem] padding-top-[5rem]
         ">Zillow Clone</h1>
       </header>
 
