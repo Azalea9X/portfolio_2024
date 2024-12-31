@@ -80,7 +80,7 @@ const exitModal = (el) => {
         height={height}
         layout="fixed" // Use fixed layout for consistent dimensions
         onError={handleImageError}
-        onMouseEnter={
+        onClick={
           (e) => {
             createModal(e.target);
             handleImageClick(e);
