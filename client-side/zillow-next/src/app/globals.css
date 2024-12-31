@@ -83,7 +83,7 @@ main{
 article{
 
 width: 50vw;
-height: 600px;
+height: 70vh !important;
 overflow-y: scroll !important;
 padding: 20px;
 line-height: 3;

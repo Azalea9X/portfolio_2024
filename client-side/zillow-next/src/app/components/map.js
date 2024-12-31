@@ -9,7 +9,7 @@ const Map = () => {
     const containerStyle = {
       minWidth: '150%',
       height: '90%', 
-        height: window.innerWidth > 1000 ? '100% !important' : ''
+
       //Media queries within React, for 660px
    
 
